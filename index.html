@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Deeplink Test</title>
+</head>
+<body>
+
+
+<h1><a id='ta' href="#">TripAdvisor</a></h1>
+
+
+<script>
+	var taDeeplink = "tripadvisor:///Hotel_Review-g33020-d81647-Reviews-Days_Inn_San_Jose_Convention_Center_Fairgrounds-San_Jose_California.html"
+
+	var taWeblink = "http://www.tripadvisor.com/Hotel_Review-g33020-d81647-Reviews-Days_Inn_San_Jose_Convention_Center_Fairgrounds-San_Jose_California.html"
+
+
+	document.getElementById('ta').addEventListener('click', function(e){
+		debugger;
+	})
+
+	openAndroid = function(nativeDeeplink, webDeeplink){
+
+		var iframe = document.createElement("iframe");
+		iframe.src = nativeDeeplink;
+		iframe.setAttribute("style","display: none;")
+		document.getElementById('qxy-results').appendChild(iframe);
+
+	    setTimeout(function() {
+           if (dl_ifrm.contentDocument) {
+              dl_ifrm.src = null;
+           } else {
+              if (web_link{{ rnd  }}!==undefined && util{{ rnd }}.is(web_link{{ rnd  }}, "url")) {
+                 window.open(web_link{{ rnd  }});
+                 util{{ rnd }}.loadTrk{{ rnd }}("opening_web_backup_page", "ad_code_process");
+              } else {
+                 location.replace("market://details?id="+dl_android_pkgid{{ rnd  }});
+                 util{{ rnd }}.loadTrk{{ rnd }}("opening_app_download_page", "ad_code_process");
+              }
+           }
+        }, 500);
+	}
+
+</script>
+</body>
+</html>
